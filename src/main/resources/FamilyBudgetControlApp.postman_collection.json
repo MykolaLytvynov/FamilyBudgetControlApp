@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "951ebe18-e1e8-47c6-8c43-f8a0bbff8e09",
+		"name": "FamilyBudgetControlApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign in as ADMIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user1\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user data (USER, ADMIN, Global_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTY0MzEzOTY0MywiZXhwIjoxNjQzMTQzMjQzfQ.2PsCTuRqfzbHAdde7DsZvGiEqYUQIK3NyyrdWO44kXsL8dPGKIcKzAfVd2-QoHcoj0ObKHFR6OyBP4Im9h9BLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get your family members (USER, ADMIN, Global_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTY0MzEzOTY0MywiZXhwIjoxNjQzMTQzMjQzfQ.2PsCTuRqfzbHAdde7DsZvGiEqYUQIK3NyyrdWO44kXsL8dPGKIcKzAfVd2-QoHcoj0ObKHFR6OyBP4Im9h9BLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/myfamily",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"myfamily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get card balance (USER, ADMIN, Global_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTY0MzEzOTY0MywiZXhwIjoxNjQzMTQzMjQzfQ.2PsCTuRqfzbHAdde7DsZvGiEqYUQIK3NyyrdWO44kXsL8dPGKIcKzAfVd2-QoHcoj0ObKHFR6OyBP4Im9h9BLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/mybalance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"mybalance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refill (USER, ADMIN, Global_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTY0MzEzOTY0MywiZXhwIjoxNjQzMTQzMjQzfQ.2PsCTuRqfzbHAdde7DsZvGiEqYUQIK3NyyrdWO44kXsL8dPGKIcKzAfVd2-QoHcoj0ObKHFR6OyBP4Im9h9BLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "100",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/refill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"refill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cash withdrawal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTY0MzEzOTY0MywiZXhwIjoxNjQzMTQzMjQzfQ.2PsCTuRqfzbHAdde7DsZvGiEqYUQIK3NyyrdWO44kXsL8dPGKIcKzAfVd2-QoHcoj0ObKHFR6OyBP4Im9h9BLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "50",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cash-withdrawal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cash-withdrawal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add limit for your family member (ADMIN, Global_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTY0MzEzOTY0MywiZXhwIjoxNjQzMTQzMjQzfQ.2PsCTuRqfzbHAdde7DsZvGiEqYUQIK3NyyrdWO44kXsL8dPGKIcKzAfVd2-QoHcoj0ObKHFR6OyBP4Im9h9BLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"limit\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/make-limits-on-person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"make-limits-on-person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add limit on your family (ADMIN, Global_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTY0MzEzOTY0MywiZXhwIjoxNjQzMTQzMjQzfQ.2PsCTuRqfzbHAdde7DsZvGiEqYUQIK3NyyrdWO44kXsL8dPGKIcKzAfVd2-QoHcoj0ObKHFR6OyBP4Im9h9BLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"limit\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/make-limits-on-family",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"make-limits-on-family"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign in as GLOBAL_ADMIN",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user3\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add limit on user from another family (GLOBAL_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTY0MzE0MTgxMywiZXhwIjoxNjQzMTQ1NDEzfQ.guEU8m_FgUFkjwx3A1iezJNDTYvO7vnlHodOmJ-0AINVQMxRw3bMcqTKD-vUcTSNbaUcOgAQ6Ldr7LGXL50r9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"limit\":5000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/global/make-limits-on-person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"global",
+						"make-limits-on-person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add limit on another family (GLOBAL_USER)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTY0MzE0MTgxMywiZXhwIjoxNjQzMTQ1NDEzfQ.guEU8m_FgUFkjwx3A1iezJNDTYvO7vnlHodOmJ-0AINVQMxRw3bMcqTKD-vUcTSNbaUcOgAQ6Ldr7LGXL50r9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"limit\":2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/global/make-limits-on-family",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"global",
+						"make-limits-on-family"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add limit on all family (GLOBAL_ADMIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTY0MzE0MTgxMywiZXhwIjoxNjQzMTQ1NDEzfQ.guEU8m_FgUFkjwx3A1iezJNDTYvO7vnlHodOmJ-0AINVQMxRw3bMcqTKD-vUcTSNbaUcOgAQ6Ldr7LGXL50r9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1000",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/global/make-limits-on-all-family",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"global",
+						"make-limits-on-all-family"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
