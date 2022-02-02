@@ -4,7 +4,7 @@ import com.mykola.familybudgetcontrolapp.configuration.jwt.AuthEntryPointJwt;
 import com.mykola.familybudgetcontrolapp.configuration.jwt.AuthTokenFilter;
 
 
-import com.mykola.familybudgetcontrolapp.service.jwt.UserDetailsServiceImpl;
+import com.mykola.familybudgetcontrolapp.bl.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

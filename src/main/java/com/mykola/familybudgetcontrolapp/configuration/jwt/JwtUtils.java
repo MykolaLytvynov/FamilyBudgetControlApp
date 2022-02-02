@@ -1,6 +1,6 @@
 package com.mykola.familybudgetcontrolapp.configuration.jwt;
 
-import com.mykola.familybudgetcontrolapp.service.jwt.UserDetailsImpl;
+import com.mykola.familybudgetcontrolapp.api.dto.jwt.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

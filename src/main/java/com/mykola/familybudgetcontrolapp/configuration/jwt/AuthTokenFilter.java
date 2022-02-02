@@ -1,6 +1,6 @@
 package com.mykola.familybudgetcontrolapp.configuration.jwt;
 
-import com.mykola.familybudgetcontrolapp.service.jwt.UserDetailsServiceImpl;
+import com.mykola.familybudgetcontrolapp.bl.service.UserDetailsServiceImpl;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
